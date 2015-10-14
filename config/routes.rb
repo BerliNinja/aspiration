@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :tens
-  resources :wsks
-  resources :bps
-  resources :as
-  resources :its
+  resources :socials
+  resources :technical_englishes
+  resources :economics
+  resources :anwendungs_systems
+  resources :it_systems
   resources :moods
   resources :aspirations
 

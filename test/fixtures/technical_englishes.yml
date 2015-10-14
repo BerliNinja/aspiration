@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  topic: MyString
+  learning: MyText
+  understood: false
+  subject: MyString
+  repeat: false
+
+two:
+  topic: MyString
+  learning: MyText
+  understood: false
+  subject: MyString
+  repeat: false

@@ -1,0 +1,29 @@
+%h1 Listing anwendungs_systems
+
+%table
+  %thead
+    %tr
+      %th Topic
+      %th Learning
+      %th Understood
+      %th Subject
+      %th Repeat
+      %th
+      %th
+      %th
+
+  %tbody
+    - @anwendungs_systems.each do |anwendungs_system|
+      %tr
+        %td= anwendungs_system.topic
+        %td= anwendungs_system.learning
+        %td= anwendungs_system.understood
+        %td= anwendungs_system.subject
+        %td= anwendungs_system.repeat
+        %td= link_to 'Show', anwendungs_system
+        %td= link_to 'Edit', edit_anwendungs_system_path(anwendungs_system)
+        %td= link_to 'Destroy', anwendungs_system, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Anwendungs system', new_anwendungs_system_path

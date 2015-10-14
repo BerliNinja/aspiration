@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Topic:
+  = @social.topic
+%p
+  %b Learning:
+  = @social.learning
+%p
+  %b Understood:
+  = @social.understood
+%p
+  %b Subject:
+  = @social.subject
+%p
+  %b Repeat:
+  = @social.repeat
+
+= link_to 'Edit', edit_social_path(@social)
+\|
+= link_to 'Back', socials_path

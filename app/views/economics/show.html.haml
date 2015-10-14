@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Topic:
+  = @economic.topic
+%p
+  %b Learning:
+  = @economic.learning
+%p
+  %b Understood:
+  = @economic.understood
+%p
+  %b Subject:
+  = @economic.subject
+%p
+  %b Repeat:
+  = @economic.repeat
+
+= link_to 'Edit', edit_economic_path(@economic)
+\|
+= link_to 'Back', economics_path

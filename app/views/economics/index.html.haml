@@ -1,0 +1,29 @@
+%h1 Listing economics
+
+%table
+  %thead
+    %tr
+      %th Topic
+      %th Learning
+      %th Understood
+      %th Subject
+      %th Repeat
+      %th
+      %th
+      %th
+
+  %tbody
+    - @economics.each do |economic|
+      %tr
+        %td= economic.topic
+        %td= economic.learning
+        %td= economic.understood
+        %td= economic.subject
+        %td= economic.repeat
+        %td= link_to 'Show', economic
+        %td= link_to 'Edit', edit_economic_path(economic)
+        %td= link_to 'Destroy', economic, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Economic', new_economic_path

@@ -1,0 +1,29 @@
+%h1 Listing technical_englishes
+
+%table
+  %thead
+    %tr
+      %th Topic
+      %th Learning
+      %th Understood
+      %th Subject
+      %th Repeat
+      %th
+      %th
+      %th
+
+  %tbody
+    - @technical_englishes.each do |technical_english|
+      %tr
+        %td= technical_english.topic
+        %td= technical_english.learning
+        %td= technical_english.understood
+        %td= technical_english.subject
+        %td= technical_english.repeat
+        %td= link_to 'Show', technical_english
+        %td= link_to 'Edit', edit_technical_english_path(technical_english)
+        %td= link_to 'Destroy', technical_english, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Technical english', new_technical_english_path

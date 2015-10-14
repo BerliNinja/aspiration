@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013143821) do
+ActiveRecord::Schema.define(version: 20151014135437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "as", force: :cascade do |t|
+  create_table "anwendungs_systems", force: :cascade do |t|
     t.string   "topic"
     t.text     "learning"
     t.boolean  "understood"
+    t.string   "subject"
     t.boolean  "repeat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -38,16 +39,17 @@ ActiveRecord::Schema.define(version: 20151013143821) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "bps", force: :cascade do |t|
+  create_table "economics", force: :cascade do |t|
     t.string   "topic"
     t.text     "learning"
     t.boolean  "understood"
+    t.string   "subject"
     t.boolean  "repeat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "its", force: :cascade do |t|
+  create_table "it_systems", force: :cascade do |t|
     t.string   "topic"
     t.text     "learning"
     t.boolean  "understood"
@@ -65,19 +67,21 @@ ActiveRecord::Schema.define(version: 20151013143821) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tens", force: :cascade do |t|
+  create_table "socials", force: :cascade do |t|
     t.string   "topic"
     t.text     "learning"
     t.boolean  "understood"
+    t.string   "subject"
     t.boolean  "repeat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "wsks", force: :cascade do |t|
+  create_table "technical_englishes", force: :cascade do |t|
     t.string   "topic"
     t.text     "learning"
     t.boolean  "understood"
+    t.string   "subject"
     t.boolean  "repeat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

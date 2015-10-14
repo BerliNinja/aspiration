@@ -1,0 +1,29 @@
+%h1 Listing it_systems
+
+%table
+  %thead
+    %tr
+      %th Topic
+      %th Learning
+      %th Understood
+      %th Subject
+      %th Repeat
+      %th
+      %th
+      %th
+
+  %tbody
+    - @it_systems.each do |it_system|
+      %tr
+        %td= it_system.topic
+        %td= it_system.learning
+        %td= it_system.understood
+        %td= it_system.subject
+        %td= it_system.repeat
+        %td= link_to 'Show', it_system
+        %td= link_to 'Edit', edit_it_system_path(it_system)
+        %td= link_to 'Destroy', it_system, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New It system', new_it_system_path

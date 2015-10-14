@@ -17,6 +17,7 @@
 table thead tr th {
   padding: 20px;
   margin: 20px;
+  font-size: 27px;
 }
 
 table tbody tr td {
@@ -25,6 +26,10 @@ table tbody tr td {
 }
 td ul li {
   list-style: none;
+}
+
+td ul li a {
+  font-size: 15px;
 }
 
 /*
@@ -36,6 +41,7 @@ a,
 a:focus,
 a:hover {
   color: #fff;
+  font-size: 25px;
 }
 
 /* Custom default button */
@@ -46,6 +52,7 @@ a:hover {
   text-shadow: none; /* Prevent inheritence from `body` */
   background-color: #fff;
   border: 1px solid #fff;
+  font-family: 'Amatic SC', cursive !important;
 }
 
 
@@ -62,8 +69,9 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Amatic SC', cursive !important;
 }
+
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -84,9 +92,7 @@ body {
 }
 
 /* Padding for spacing */
-.inner {
-  padding: 30px;
-}
+
 
 
 /*
@@ -95,6 +101,8 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #FF1D8E;
+  font-size: 50px;
 }
 
 .masthead-nav > li {
@@ -109,8 +117,10 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: black; /* IE8 proofing */
+  color: #FF1D8E; /* IE8 proofing */
   border-bottom: 2px solid transparent;
+  font-family: 'Amatic SC', cursive !important;
+  font-size: 30px;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {

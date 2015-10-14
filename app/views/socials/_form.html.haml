@@ -1,0 +1,12 @@
+= simple_form_for(@social) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :topic
+    = f.input :learning
+    = f.input :understood
+    = f.input :subject
+    = f.input :repeat
+
+  .form-actions
+    = f.button :submit

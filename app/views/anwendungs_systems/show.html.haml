@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Topic:
+  = @anwendungs_system.topic
+%p
+  %b Learning:
+  = @anwendungs_system.learning
+%p
+  %b Understood:
+  = @anwendungs_system.understood
+%p
+  %b Subject:
+  = @anwendungs_system.subject
+%p
+  %b Repeat:
+  = @anwendungs_system.repeat
+
+= link_to 'Edit', edit_anwendungs_system_path(@anwendungs_system)
+\|
+= link_to 'Back', anwendungs_systems_path
