@@ -1,0 +1,27 @@
+%h1 All BP Topics
+
+%table
+  %thead
+    %tr
+      %th Topic
+      %th Learning
+      %th Understood
+      %th Repeat
+      %th
+      %th
+      %th
+
+  %tbody
+    - @bps.each do |bp|
+      %tr
+        %td= bp.topic
+        %td= bp.learning
+        %td= bp.understood
+        %td= bp.repeat
+        %td= link_to 'Show', bp
+        %td= link_to 'Edit', edit_bp_path(bp)
+        %td= link_to 'Destroy', bp, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Bp', new_bp_path

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aspiration: MyString
+  start: 2015-10-01 13:28:10
+  end: 2015-10-01 13:28:10
+  unit: MyString
+  amount: 1
+  category: MyString
+  description: MyText
+  coin: 1
+
+two:
+  aspiration: MyString
+  start: 2015-10-01 13:28:10
+  end: 2015-10-01 13:28:10
+  unit: MyString
+  amount: 1
+  category: MyString
+  description: MyText
+  coin: 1

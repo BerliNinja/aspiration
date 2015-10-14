@@ -1,0 +1,27 @@
+%h1 Listing wsks
+
+%table
+  %thead
+    %tr
+      %th Topic
+      %th Learning
+      %th Understood
+      %th Repeat
+      %th
+      %th
+      %th
+
+  %tbody
+    - @wsks.each do |wsk|
+      %tr
+        %td= wsk.topic
+        %td= wsk.learning
+        %td= wsk.understood
+        %td= wsk.repeat
+        %td= link_to 'Show', wsk
+        %td= link_to 'Edit', edit_wsk_path(wsk)
+        %td= link_to 'Destroy', wsk, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Wsk', new_wsk_path

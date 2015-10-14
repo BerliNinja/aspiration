@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Mood count:
+  = @mood.mood_count
+%p
+  %b Activity:
+  = @mood.activity
+%p
+  %b Time:
+  = @mood.time
+
+= link_to 'Edit', edit_mood_path(@mood)
+\|
+= link_to 'Back', moods_path

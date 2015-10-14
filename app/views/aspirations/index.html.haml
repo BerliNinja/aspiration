@@ -1,0 +1,43 @@
+%h1.cover-heading All my Aspirations.
+%p.lead Whatever you ever dreamed of. It can become true. Just do it. Damn thats nikes slogan. But still true.
+%p.lead
+  %a.btn.btn-lg.btn-default{:href => "#"} Learn more
+  %h1 Listing aspirations
+
+%table
+  %thead
+    %tr
+      %th Aspiration
+      %th Start
+      %th End
+      %th Unit
+      %th Amount
+      %th Category
+      %th Description
+      %th Coin
+      %th Options
+
+
+  %tbody
+    - @aspirations.each do |aspiration|
+      %tr
+        %td= aspiration.aspiration
+        %td= aspiration.start.strftime("%d.%m.%y")
+        %td= aspiration.end.strftime("%d.%m.%y")
+        %td= aspiration.unit
+        %td= aspiration.amount
+        %td= aspiration.category
+        %td= aspiration.description
+        %td= aspiration.coin
+        %td
+          %ul
+            %li
+              = link_to 'Show', aspiration
+            %li
+              = link_to 'Edit', edit_aspiration_path(aspiration)
+            %li
+              = link_to 'Destroy', aspiration, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Aspiration', new_aspiration_path

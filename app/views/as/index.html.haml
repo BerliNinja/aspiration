@@ -1,0 +1,27 @@
+%h1 All AS Topics
+
+%table
+  %thead
+    %tr
+      %th Topic
+      %th Learning
+      %th Understood
+      %th Repeat
+      %th
+      %th
+      %th
+
+  %tbody
+    - @as.each do |a|
+      %tr
+        %td= a.topic
+        %td= a.learning
+        %td= a.understood
+        %td= a.repeat
+        %td= link_to 'Show', a
+        %td= link_to 'Edit', edit_a_path(a)
+        %td= link_to 'Destroy', a, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New As', new_a_path

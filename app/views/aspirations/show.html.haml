@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Aspiration:
+  = @aspiration.aspiration
+%p
+  %b Start:
+  = @aspiration.start
+%p
+  %b End:
+  = @aspiration.end
+%p
+  %b Unit:
+  = @aspiration.unit
+%p
+  %b Amount:
+  = @aspiration.amount
+%p
+  %b Category:
+  = @aspiration.category
+%p
+  %b Description:
+  = @aspiration.description
+%p
+  %b Coin:
+  = @aspiration.coin
+
+= link_to 'Edit', edit_aspiration_path(@aspiration)
+\|
+= link_to 'Back', aspirations_path

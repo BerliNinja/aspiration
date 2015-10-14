@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Topic:
+  = @wsk.topic
+%p
+  %b Learning:
+  = @wsk.learning
+%p
+  %b Understood:
+  = @wsk.understood
+%p
+  %b Repeat:
+  = @wsk.repeat
+
+= link_to 'Edit', edit_wsk_path(@wsk)
+\|
+= link_to 'Back', wsks_path

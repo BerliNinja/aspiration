@@ -1,0 +1,50 @@
+!!!
+%html{:lang => "en"}
+  %head
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    / The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Amatic+SC", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css", :rel => "stylesheet"}/
+    %title Aspiration
+
+  %body
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          .masthead.clearfix
+            .inner
+              %h3.masthead-brand Aspirations
+              %nav
+                %ul.nav.masthead-nav
+                  %li.active
+                    = link_to "Home", root_path
+                  %li
+                    = link_to "Mood", moods_path
+                  %li
+                    = link_to "AS", as_path
+                  %li
+                    = link_to "ITS", its_path
+                  %li
+                    = link_to "BP", bps_path
+                  %li
+                    = link_to "WSK", wsks_path
+                  %li
+                    %a{:href => "Contact"} Contact
+          .inner.cover
+            = yield
+
+          .mastfoot
+            .inner
+              %p
+                Cover template for Nina :) mady with <3
+    /
+      Bootstrap core JavaScript
+      \==================================================
+    / Placed at the end of the document so the pages load faster
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}

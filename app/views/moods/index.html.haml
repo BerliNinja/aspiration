@@ -1,0 +1,28 @@
+%h1 Listing moods
+
+%table
+  %thead
+    %tr
+      %th Mood count
+      %th Activity
+      %th Time
+      %th Options
+
+  %tbody
+    - @moods.each do |mood|
+      %tr
+        %td= mood.mood_count #{/10}
+        %td= mood.activity
+        %td= mood.time.strftime("%H:%M - %d.%m.%y")
+        %td
+          %ul
+            %li
+              = link_to 'Show', mood
+            %li
+              = link_to 'Edit', edit_mood_path(mood)
+            %li
+              = link_to 'Destroy', mood, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Mood', new_mood_path

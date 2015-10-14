@@ -1,0 +1,27 @@
+%h1 Listing tens
+
+%table
+  %thead
+    %tr
+      %th Topic
+      %th Learning
+      %th Understood
+      %th Repeat
+      %th
+      %th
+      %th
+
+  %tbody
+    - @tens.each do |ten|
+      %tr
+        %td= ten.topic
+        %td= ten.learning
+        %td= ten.understood
+        %td= ten.repeat
+        %td= link_to 'Show', ten
+        %td= link_to 'Edit', edit_ten_path(ten)
+        %td= link_to 'Destroy', ten, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ten', new_ten_path
